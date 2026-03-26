@@ -1,5 +1,27 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import { MessageCircle } from "lucide-react";
+
+function ZestLogoFooter() {
+  const [imgError, setImgError] = useState(false);
+
+  return (
+    <div className="bg-white rounded-xl p-2 inline-block mb-6">
+      {imgError ? (
+        <span className="font-serif text-3xl font-bold tracking-[0.1em] text-foreground">
+          ZEST
+        </span>
+      ) : (
+        <img
+          src="/images/zest-logo.jpg"
+          alt="Zest"
+          className="h-10 w-auto object-contain"
+          onError={() => setImgError(true)}
+        />
+      )}
+    </div>
+  );
+}
 
 export function Footer() {
   return (
@@ -9,22 +31,8 @@ export function Footer() {
           
           {/* About Zest */}
           <div>
-            <Link href="/" className="inline-block mb-6">
-              <div className="bg-white rounded-xl p-2 inline-block">
-                <img
-                  src="/images/zest-logo.jpg"
-                  alt="Zest"
-                  className="h-10 w-auto object-contain"
-                  onError={(e) => {
-                    const t = e.currentTarget;
-                    t.style.display = "none";
-                    const fallback = document.createElement("span");
-                    fallback.className = "font-serif text-3xl font-bold tracking-[0.1em] text-foreground";
-                    fallback.textContent = "ZEST";
-                    t.parentElement?.appendChild(fallback);
-                  }}
-                />
-              </div>
+            <Link href="/">
+              <ZestLogoFooter />
             </Link>
             <p className="text-background/80 text-sm leading-relaxed mb-6">
               Curating exceptional natural beauty, wellness, and lifestyle brands for 23 years. A family-led commitment to quality and service.

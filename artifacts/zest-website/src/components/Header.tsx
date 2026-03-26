@@ -17,6 +17,27 @@ const navLinks = [
   { name: "Journal", href: "/journal" },
 ];
 
+function ZestLogo({ className }: { className?: string }) {
+  const [imgError, setImgError] = useState(false);
+
+  if (imgError) {
+    return (
+      <span className="font-serif text-3xl font-bold tracking-[0.1em] text-foreground">
+        ZEST
+      </span>
+    );
+  }
+
+  return (
+    <img
+      src="/images/zest-logo.jpg"
+      alt="Zest"
+      className={cn("h-10 w-auto object-contain", className)}
+      onError={() => setImgError(true)}
+    />
+  );
+}
+
 export function Header() {
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,20 +72,8 @@ export function Header() {
       >
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="group flex-shrink-0">
-            <img
-              src="/images/zest-logo.jpg"
-              alt="Zest"
-              className="h-10 w-auto object-contain"
-              onError={(e) => {
-                const t = e.currentTarget;
-                t.style.display = "none";
-                const fallback = document.createElement("span");
-                fallback.className = "font-serif text-3xl font-bold tracking-[0.1em] text-foreground";
-                fallback.textContent = "ZEST";
-                t.parentElement?.appendChild(fallback);
-              }}
-            />
+          <Link href="/" className="flex-shrink-0">
+            <ZestLogo />
           </Link>
 
           {/* Desktop Nav */}
@@ -113,11 +122,7 @@ export function Header() {
       >
         {/* Mobile logo */}
         <Link href="/" className="mb-6">
-          <img
-            src="/images/zest-logo.jpg"
-            alt="Zest"
-            className="h-10 w-auto object-contain"
-          />
+          <ZestLogo />
         </Link>
         <nav className="flex flex-col gap-6 text-xl font-serif mt-4">
           {navLinks.map((link) => (
