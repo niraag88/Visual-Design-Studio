@@ -32,7 +32,7 @@ function ZestLogo({ className }: { className?: string }) {
     <img
       src="/images/zest-logo.png"
       alt="Zest"
-      className={cn("h-20 w-auto object-contain", className)}
+      className={cn("h-40 w-auto object-contain", className)}
       onError={() => setImgError(true)}
     />
   );
