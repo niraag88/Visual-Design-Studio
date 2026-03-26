@@ -1,0 +1,29 @@
+import { brands } from "@/data/brands";
+import { BrandCard } from "@/components/Cards";
+import { EnquiryCTA } from "@/components/EnquiryCTA";
+
+export default function BrandPartners() {
+  return (
+    <div className="pt-24 pb-0">
+      <section className="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="max-w-3xl mb-16">
+          <h1 className="font-serif text-5xl md:text-6xl mb-6">Our Brand Partners</h1>
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            A carefully curated portfolio of exceptional, conscious brands spanning skincare, body care, aromatherapy, and hospitality amenities.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">
+          {brands.map(brand => (
+            <BrandCard key={brand.id} brand={brand} />
+          ))}
+        </div>
+      </section>
+
+      <EnquiryCTA 
+        title="Looking for the perfect brand match?" 
+        text="Our team can help you select the ideal product lines for your retail space, salon, or hotel property." 
+      />
+    </div>
+  );
+}

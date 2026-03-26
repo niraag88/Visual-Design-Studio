@@ -1,0 +1,689 @@
+Create a modern, elegant, highly visual multi-page website for a company called Zest.
+
+This is not an ecommerce website for checkout, but it should feel structurally similar to a premium Shopify-style site with:
+
+detailed brand pages
+detailed product pages
+image galleries
+rich product information
+strong storytelling
+a B2B / Hospitality section
+a bespoke solutions section
+enquiry/contact calls to action throughout
+
+The website must feel:
+
+modern
+minimal
+natural
+personal
+premium without being old-fashioned luxury
+consumer-beautiful while still serving B2B customers underneath
+
+The visual direction should combine:
+
+the clean structure of Salt & Mud
+the product depth of Nikura product pages
+the polished calm of NEOM
+the softness and imagery feel of Miniml
+a fresh and colorful identity inspired by the Zest logo
+
+Do not make it look corporate, generic, techy, or like a basic distributor catalog.
+
+Core Brand Direction
+
+Zest is a family-led importer and distributor of natural beauty, wellness, spa, and lifestyle products.
+
+The company’s values are deeply personal:
+
+every customer matters
+every conversation matters
+every relationship matters
+every supplier relationship is selected and nurtured with care
+products are chosen with purpose, not just to make money
+the business is built on trust, service, flexibility, and long-term relationships
+Zest has been established for 23 years and should feel credible, trustworthy, and enduring
+
+The site should communicate that Zest is:
+
+thoughtful
+values-led
+highly curated
+flexible
+customer-focused
+experienced
+warm and personal
+commercially capable without feeling salesy
+
+The website should suggest that Zest helps improve wellness experiences through carefully selected natural products and tailored solutions.
+
+Primary Website Goals
+
+The website must:
+
+Build trust and credibility
+Tell the story of Zest in a believable and emotionally intelligent way
+Showcase multiple brands beautifully
+Support many products and future expansion
+Include a strong B2B / Hospitality area
+Show that Zest can create curated rituals and treatment concepts for hotel spas and wellness spaces
+Feel rich in information, not like a thin brochure site
+Generate enquiries via contact forms and WhatsApp
+Leave room for future downloadable brochures, testimonials, and journal/blog content
+Technical Requirements
+
+Build this as a React + Vite website with a scalable component structure.
+
+Requirements:
+
+React
+Vite
+clean modern CSS
+responsive across desktop, tablet, and mobile
+reusable components
+data-driven placeholder content for brands and products
+easy to maintain and expand later
+portable front-end structure suitable for later export to GitHub and then to GoDaddy cPanel hosting
+
+Do not build anything dependent on a complex backend for now.
+
+Use:
+
+reusable page templates
+reusable product cards
+reusable brand cards
+reusable gallery components
+reusable CTA components
+reusable info blocks
+
+Create clean placeholder data in structured files for:
+
+brands
+products
+categories
+testimonials
+collections
+
+Use local placeholder images or clean placeholder image areas.
+
+Main Sitemap
+
+Create the following pages:
+
+Home
+Our Story
+Brand Partners
+Brand Detail Page Template
+Collections
+Product Detail Page Template
+B2B & Hospitality
+Bespoke Solutions
+Journal
+Contact
+
+Also create:
+
+header navigation
+footer
+newsletter signup section
+WhatsApp contact button
+enquiry CTA blocks throughout the site
+Visual Style
+Overall look
+
+The website should feel:
+
+airy
+elegant
+calm
+editorial
+refined
+colorful in a controlled way
+Color usage
+
+Use the Zest logo colors as inspiration for accents and section tones:
+
+pink
+yellow
+orange
+green
+teal
+purple
+
+But do not make the whole site loud or rainbow-heavy.
+
+Use:
+
+warm white / soft off-white as main backgrounds
+pale pastel content sections
+occasional color-led blocks inspired by the logo
+tasteful gradients or soft color overlays where appropriate
+subtle hover interactions
+Typography
+
+Use a premium combination:
+
+elegant serif for headlines
+clean sans serif for body copy and interface text
+
+Typography should feel editorial, calm, and modern.
+
+Layout direction
+spacious sections
+refined grid layouts
+soft rounded corners in moderation
+clean image blocks
+minimal but not sterile
+strong use of whitespace
+clear hierarchy
+polished hover states
+premium buttons
+
+Avoid:
+
+harsh shadows
+generic template layouts
+overcrowded sections
+gimmicky animations
+overuse of bright color
+Header and Navigation
+
+The header should be clean, premium, and sticky.
+
+Include:
+
+logo on the left
+navigation in the center/right
+enquiry/contact CTA button
+mobile menu
+
+Navigation items:
+
+Home
+Our Story
+Brand Partners
+Collections
+B2B & Hospitality
+Bespoke Solutions
+Journal
+Contact
+Homepage Structure
+
+Build a rich homepage with the following sections:
+
+1. Hero Section
+
+Create a strong hero that immediately feels premium and personal.
+
+Include:
+
+large headline
+supporting text
+CTA buttons
+beautiful lifestyle/product visual area
+
+Tone of headline should communicate:
+natural beauty, wellness, curation, personal service, trust
+
+Possible theme:
+“Natural beauty and wellness, curated with care.”
+
+Do not hardcode that exact line only; create polished placeholder copy in this spirit.
+
+2. Brand Belief / Philosophy Section
+
+A section that introduces what Zest stands for:
+
+personal relationships
+purposeful curation
+trusted partnerships
+flexible service
+values-led business
+3. Featured Brand Partners Section
+
+Show a visually beautiful grid or slider of featured brand cards.
+
+Each brand card should have:
+
+placeholder logo/image
+brand name
+short line
+link to brand page
+4. Collections / Product Worlds Section
+
+Show 8–10 visually distinct collection/category cards.
+
+Examples:
+
+Aromatherapy
+Bath & Body
+Facial Skincare
+Guest Amenities
+Hand & Foot Care
+Spa Rituals
+Wellness Lifestyle
+Bespoke Creations
+
+Each should include:
+
+image
+title
+short description
+5. Why Zest Section
+
+Show 4–6 value blocks such as:
+
+Personal Service
+23 Years of Trusted Experience
+Curated Brand Partnerships
+Flexible, Solution-Led Approach
+Market Understanding
+Long-Term Relationships
+6. B2B & Hospitality Preview Section
+
+This section must preview the business side of the site in a warm and elegant way.
+
+Show that Zest supports:
+
+hotels
+hotel spas
+spa owners
+purchasing teams
+specialty retail
+wellness partners
+
+It must feel like solutions, not sales.
+
+7. Curated Rituals & Treatment Concepts Section
+
+Very important.
+
+Add a dedicated homepage section showing that Zest can support:
+
+curated spa rituals
+treatment journeys
+signature wellness concepts
+product-driven spa experiences
+tailored recommendations for hotel spas and wellness spaces
+
+This should feel elevated and beautiful.
+
+8. Our Story Snapshot Section
+
+A warm, story-led section introducing the family-led nature of the company and the long-standing journey of the business.
+
+9. Testimonials / Trusted By Placeholder Section
+
+Create a polished placeholder area for:
+
+hotel logos
+spa partners
+testimonials
+brand trust statements
+10. Newsletter / Contact CTA Section
+
+Include:
+
+newsletter signup
+enquiry CTA
+link to contact page
+Our Story Page
+
+This page should feel emotionally grounded and credible.
+
+Include sections such as:
+
+Introduction to Zest
+A Family-Led Journey
+What We Believe In
+Why We Curate Carefully
+Relationships That Matter
+Why Customers Trust Us
+A Lasting Presence in Wellness
+
+Tone:
+
+warm
+believable
+thoughtful
+not exaggerated
+not overly sentimental
+
+Make the page visually rich with alternating image/text sections.
+
+Brand Partners Page
+
+This page should show a premium grid of all brand partners.
+
+Include:
+
+page intro
+brand cards
+brand story teaser
+category tags
+link to individual brand pages
+
+Create placeholder brand data for around 12–15 brands.
+
+Each placeholder brand should have:
+
+name
+short description
+image
+category tags
+story snippet
+Brand Detail Page Template
+
+Create a reusable template for individual brand pages.
+
+Each brand page should include:
+
+1. Brand Hero
+brand image
+brand name
+short positioning line
+2. Brand Story
+longer descriptive brand narrative
+why the brand matters
+what makes it distinctive
+3. Why Zest Chose This Brand
+
+This is important.
+Add a section explaining why Zest selected the brand.
+
+4. Product Categories / Collections
+
+Show grouped product categories for that brand.
+
+5. Featured Products
+
+Show a selection of products with cards.
+
+6. Full Product Grid
+
+Display all products for that brand using placeholder data.
+
+Each product card should show:
+
+image
+product name
+available size
+short descriptor
+click through to product page
+7. Enquiry CTA
+
+Encourage product or partnership enquiries.
+
+Collections Page
+
+Create a page that showcases the major product worlds, not just individual products.
+
+Examples:
+
+Aromatherapy
+Bath & Body
+Facial Care
+Guest Amenities
+Hand & Foot
+Massage & Body Oils
+Spa Rituals
+Home & Wellness Lifestyle
+Bespoke Collections
+
+Each collection card should include:
+
+strong imagery
+short intro
+link onward
+
+This page should feel editorial and inspiring.
+
+Product Detail Page Template
+
+This is one of the most important parts of the website.
+
+Make it feel like a premium product detail page inspired by modern ecommerce, but without checkout.
+
+Each product page should include:
+
+Top Section
+large product image
+image gallery thumbnails
+product name
+brand name
+short description
+available sizes / variants
+optional tags such as:
+Spa
+Hospitality
+Retail
+Professional Use
+Home Use
+Main Content Sections
+Overview
+Key Benefits
+How to Use
+Suitable For
+Key Ingredients / Hero Ingredients
+Sensory Notes / Texture / Aroma where relevant
+Available Sizes
+Why We Love It or Why Zest Selected It
+Related Products
+Enquire About This Product
+Product gallery
+
+Create a horizontally scrollable or thumbnail-based gallery with multiple placeholder images.
+
+Product data
+
+Use rich placeholder data so the page feels robust and full of information.
+
+The goal is that the product page should feel:
+
+knowledgeable
+trustworthy
+useful
+premium
+believable
+
+Do not keep product pages thin or generic.
+
+B2B & Hospitality Page
+
+This page should be elegant, warm, detailed, and commercial in a subtle way.
+
+It should show that Zest supports:
+
+luxury hotels
+hotel spas
+independent spas
+wellness destinations
+hospitality groups
+specialty retailers
+business buyers looking for tailored product solutions
+
+Sections to include:
+
+Intro to B2B & Hospitality
+Who We Work With
+Product Areas for Business Partners
+Curated Rituals & Treatment Concepts
+Guest Amenities
+Retail & Spa Boutique Opportunities
+Tailored Recommendations
+Flexible Partnership Approach
+Enquiry CTA
+
+This page must also make clear that Zest can help develop:
+
+curated rituals
+treatment protocols
+tailored product recommendations
+spa menu concepts
+differentiated guest experiences
+Bespoke Solutions Page
+
+This page should focus on tailored solutions.
+
+Include:
+
+page intro
+what bespoke means at Zest
+custom wellness concepts
+tailored guest amenities
+private-label or custom product direction placeholder
+collaborative development approach
+ideal partner types
+enquiry section
+
+This should feel premium and collaborative, not overly technical.
+
+Journal Page
+
+Create a simple but elegant placeholder journal page.
+
+Include:
+
+page intro
+article cards
+wellness / brand / hospitality / product story categories
+
+This can be static placeholder content for now.
+
+Contact Page
+
+Include:
+
+elegant enquiry form
+contact details placeholders
+WhatsApp CTA
+newsletter signup
+optional map/image placeholder
+simple FAQ teaser
+
+Also add a floating or fixed WhatsApp contact button throughout the site.
+
+Popup / Lead Capture
+
+Create a tasteful delayed popup or slide-in, not an aggressive instant popup.
+
+Use it for:
+
+newsletter signup
+or
+trade / partnership enquiry
+
+Keep it elegant and easy to close.
+
+Footer
+
+Include:
+
+navigation links
+short Zest brand summary
+newsletter signup
+contact info placeholders
+social links placeholders
+WhatsApp link
+copyright
+Content Tone
+
+All placeholder copy should feel:
+
+polished
+human
+warm
+refined
+believable
+not overhyped
+not too corporate
+not vague wellness fluff
+
+Avoid phrases that sound fake or generic.
+
+Use language around:
+
+careful curation
+meaningful relationships
+trusted partnerships
+personal service
+thoughtful wellness
+tailored support
+lasting quality
+natural beauty and wellbeing
+Placeholder Data Requirements
+
+Create realistic placeholder data for:
+
+12–15 brands
+8–10 collections
+at least 40–60 products across brands to demonstrate the system
+several testimonials placeholders
+several journal posts placeholders
+
+Each product should have:
+
+name
+slug
+brand
+category
+size options
+short description
+full description
+benefits
+usage
+ingredients or hero ingredients
+sensory notes where relevant
+image placeholders
+tags
+Component Requirements
+
+Create reusable components for:
+
+Header
+Footer
+Hero
+Section intro
+Brand card
+Product card
+Collection card
+Testimonial card
+CTA block
+Product gallery
+Product info sections
+Newsletter form
+Contact form
+Popup
+WhatsApp button
+UX Requirements
+beautiful hover states
+strong spacing
+smooth transitions
+clean mobile experience
+clear page hierarchy
+easy browsing between brands and products
+easy return navigation
+sticky header
+intuitive visual rhythm
+Important Constraints
+Do not add checkout
+Do not add cart
+Do not make this look like a marketplace
+Do not make it feel cold or overly corporate
+Do not make it overly feminine or overly medicinal
+Do not make it generic eco-brand beige
+Do not make it too loud despite the colorful logo
+Keep it scalable for many more products later
+Final Deliverable
+
+Generate a polished first version of the full website with:
+
+all pages above
+placeholder images
+placeholder copy
+placeholder data structure
+routing between pages
+elegant responsive styling
+reusable architecture for future edits
+
+Also make sure the project structure is clean and ready for future export to GitHub and later hosting on GoDaddy cPanel.

@@ -21,7 +21,8 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 ```text
 artifacts-monorepo/
 ├── artifacts/              # Deployable applications
-│   └── api-server/         # Express API server
+│   ├── api-server/         # Express API server
+│   └── zest-website/       # Zest brand website (React + Vite)
 ├── lib/                    # Shared libraries
 │   ├── api-spec/           # OpenAPI spec + Orval codegen config
 │   ├── api-client-react/   # Generated React Query hooks
@@ -35,18 +36,45 @@ artifacts-monorepo/
 └── package.json            # Root package with hoisted devDeps
 ```
 
-## TypeScript & Composite Projects
+## Zest Website (artifacts/zest-website)
 
-Every package extends `tsconfig.base.json` which sets `composite: true`. The root `tsconfig.json` lists all packages as project references. This means:
+A premium, multi-page website for Zest — a family-led importer and distributor of natural beauty, wellness, spa, and lifestyle products, established 23 years ago.
 
-- **Always typecheck from the root** — run `pnpm run typecheck` (which runs `tsc --build --emitDeclarationOnly`). This builds the full dependency graph so that cross-package imports resolve correctly. Running `tsc` inside a single package will fail if its dependencies haven't been built yet.
-- **`emitDeclarationOnly`** — we only emit `.d.ts` files during typecheck; actual JS bundling is handled by esbuild/tsx/vite...etc, not `tsc`.
-- **Project references** — when package A depends on package B, A's `tsconfig.json` must list B in its `references` array. `tsc --build` uses this to determine build order and skip up-to-date packages.
+### Pages
+- `/` — Homepage (hero, brand philosophy, collections, B2B preview, rituals, story, testimonials)
+- `/our-story` — Company story and values
+- `/brand-partners` — Grid of all brand partners
+- `/brands/:slug` — Individual brand detail template
+- `/collections` — Product collection worlds
+- `/products/:slug` — Rich product detail template
+- `/b2b-hospitality` — B2B and hospitality support page
+- `/bespoke` — Bespoke solutions page
+- `/journal` — Blog/journal page
+- `/contact` — Contact and enquiry page
 
-## Root Scripts
+### Key Components
+- `Header.tsx` — Sticky nav with logo, links, Enquire CTA, mobile menu
+- `Footer.tsx` — Links, newsletter, social, WhatsApp
+- `Cards.tsx` — BrandCard, ProductCard, CollectionCard, TestimonialCard
+- `EnquiryCTA.tsx` — Reusable enquiry block
+- `WhatsAppButton.tsx` — Fixed floating WhatsApp button
 
-- `pnpm run build` — runs `typecheck` first, then recursively runs `build` in all packages that define it
-- `pnpm run typecheck` — runs `tsc --build --emitDeclarationOnly` using project references
+### Data Files (src/data/)
+- `brands.ts` — 12-15 placeholder brand records
+- `products.ts` — 20-30 placeholder product records
+- `collections.ts` — 9-10 collection/category records
+- `testimonials.ts` — 6-8 placeholder testimonials
+
+### Dependencies
+- `framer-motion` — Subtle animations
+- `lucide-react` — Clean iconography
+- `clsx` + `tailwind-merge` — Class utilities
+
+### Design
+- Warm off-white background, terracotta/coral primary accent
+- Playfair Display / Georgia serif for headings, Inter for body
+- Airy, editorial, minimal premium feel
+- Unsplash placeholder images (spa, botanical, wellness)
 
 ## Packages
 
@@ -66,31 +94,16 @@ Express 5 API server. Routes live in `src/routes/` and use `@workspace/api-zod` 
 
 Database layer using Drizzle ORM with PostgreSQL. Exports a Drizzle client instance and schema models.
 
-- `src/index.ts` — creates a `Pool` + Drizzle instance, exports schema
-- `src/schema/index.ts` — barrel re-export of all models
-- `src/schema/<modelname>.ts` — table definitions with `drizzle-zod` insert schemas (no models definitions exist right now)
-- `drizzle.config.ts` — Drizzle Kit config (requires `DATABASE_URL`, automatically provided by Replit)
-- Exports: `.` (pool, db, schema), `./schema` (schema only)
-
-Production migrations are handled by Replit when publishing. In development, we just use `pnpm --filter @workspace/db run push`, and we fallback to `pnpm --filter @workspace/db run push-force`.
-
 ### `lib/api-spec` (`@workspace/api-spec`)
 
-Owns the OpenAPI 3.1 spec (`openapi.yaml`) and the Orval config (`orval.config.ts`). Running codegen produces output into two sibling packages:
-
-1. `lib/api-client-react/src/generated/` — React Query hooks + fetch client
-2. `lib/api-zod/src/generated/` — Zod schemas
+Owns the OpenAPI 3.1 spec (`openapi.yaml`) and the Orval config (`orval.config.ts`). Running codegen produces output into two sibling packages.
 
 Run codegen: `pnpm --filter @workspace/api-spec run codegen`
 
 ### `lib/api-zod` (`@workspace/api-zod`)
 
-Generated Zod schemas from the OpenAPI spec (e.g. `HealthCheckResponse`). Used by `api-server` for response validation.
+Generated Zod schemas from the OpenAPI spec.
 
 ### `lib/api-client-react` (`@workspace/api-client-react`)
 
-Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHealthCheck`, `healthCheck`).
-
-### `scripts` (`@workspace/scripts`)
-
-Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.
+Generated React Query hooks and fetch client from the OpenAPI spec.

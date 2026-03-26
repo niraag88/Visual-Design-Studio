@@ -1,0 +1,18 @@
+packages:
+  "framer-motion": "For elegant, premium page transitions and subtle scroll animations fitting an editorial style."
+  "clsx": "Utility for constructing className strings conditionally."
+  "tailwind-merge": "Utility function to efficiently merge Tailwind CSS classes without style conflicts."
+  "lucide-react": "For clean, minimal iconography."
+
+images:
+  - path: "artifacts/zest-website/public/images/zest-hero-abstract.png"
+    description: "A highly elegant, minimal abstract texture in soft warm off-white and pale beige tones. Very soft lighting, resembling natural stone or soft linen fabric. Minimalist, premium, editorial style."
+    aspect_ratio: "16:9"
+  - path: "artifacts/zest-website/public/images/zest-shape-accent.png"
+    description: "A soft, blurry organic shape in pale terracotta and sage green on a transparent background. Looks like a gentle watercolor wash or light leak. Used for background ambiance."
+    aspect_ratio: "1:1"
+
+notes:
+  - "This is a static frontend-only site as requested. All data is mock data stored in src/data/."
+  - "Routing is handled via wouter."
+  - "The design uses Cormorant Garamond for an elegant, editorial serif feel, and Inter for clean body copy."
