@@ -6,16 +6,16 @@ function ZestLogoFooter() {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div className="bg-white rounded-xl p-2 inline-block mb-6">
+    <div className="inline-block mb-6">
       {imgError ? (
-        <span className="font-serif text-3xl font-bold tracking-[0.1em] text-foreground">
+        <span className="font-serif text-3xl font-bold tracking-[0.1em] text-white">
           ZEST
         </span>
       ) : (
         <img
-          src="/images/zest-logo.jpg"
+          src="/images/zest-logo.png"
           alt="Zest"
-          className="h-8 w-auto object-contain"
+          className="h-12 w-auto object-contain"
           onError={() => setImgError(true)}
         />
       )}
