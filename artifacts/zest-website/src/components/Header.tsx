@@ -22,7 +22,6 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // If we are on the home page, we want a transparent header initially
   const isHome = location === "/";
 
   useEffect(() => {
@@ -33,26 +32,28 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location]);
 
   return (
     <>
+      <div className="bg-zest-coral text-foreground text-center py-2 text-sm font-medium tracking-wide">
+        Family-led natural beauty & wellness distribution since 2002
+      </div>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out",
+          "fixed top-10 left-0 right-0 z-50 transition-all duration-500 ease-out",
           isScrolled || !isHome
             ? "glass-nav py-4"
             : "bg-transparent py-6"
         )}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="group">
             <span className={cn(
-              "font-serif text-3xl font-medium tracking-wide transition-colors duration-300",
+              "font-serif text-3xl font-bold tracking-[0.1em] transition-colors duration-300",
               (!isScrolled && isHome) ? "text-foreground" : "text-foreground"
             )}>
               ZEST
@@ -80,12 +81,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             <Link
               href="/contact"
-              className={cn(
-                "hidden md:inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300",
-                (!isScrolled && isHome)
-                  ? "bg-foreground text-background hover:bg-foreground/90 hover:shadow-lg hover:-translate-y-0.5"
-                  : "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5"
-              )}
+              className="hidden md:inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all duration-300"
             >
               Enquire
             </Link>
@@ -104,7 +100,7 @@ export function Header() {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-background z-40 lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-24 px-6",
+          "fixed inset-0 bg-background z-40 lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-32 px-6",
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >

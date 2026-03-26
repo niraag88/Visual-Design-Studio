@@ -1,0 +1,191 @@
+Replit refinement prompt
+
+Refine the current Zest website significantly. Do not rebuild from scratch, but upgrade the design, layout, color system, image density, and written content across all pages.
+
+Main design correction
+
+The current version is too muted, too narrow, too sparse, and not visually distinctive enough.
+It needs to become much closer to:
+
+the framework and editorial cleanliness of Salt & Mud
+the color confidence and freshness of Nikura
+the polished calm of NEOM
+the soft image-led modernity of Miniml
+
+The website must feel more like Zest:
+
+brighter
+fresher
+more visual
+more layered
+more premium
+more memorable
+Color system
+
+Redesign the palette using the Zest logo as inspiration.
+
+Use:
+
+warm ivory / soft white base
+coral-orange as primary CTA color
+citrus yellow accents
+soft pink accents
+fresh green and teal section tones
+subtle purple highlights where elegant
+pastel gradients inspired by the logo
+
+Do not make the site rainbow-heavy, but make the color language clearly feel derived from the Zest logo.
+
+Use more color than the current version.
+
+Layout corrections
+
+The current layout is too narrow and leaves too much empty space.
+
+Fix this by:
+
+increasing max content width
+using more full-width sections
+using more editorial asymmetry
+enlarging image areas
+making grids feel fuller and more premium
+improving spacing rhythm between sections
+
+The pages should feel rich, not miniaturized.
+
+Homepage improvements
+
+Redesign the homepage to feel more alive and complete.
+
+Improve with:
+
+a stronger hero composition
+more imagery in the hero
+a layered or collage-style visual area
+more visible color accents
+a richer brand partners section
+a more editorial collections section
+a stronger B2B / hospitality preview
+a dedicated curated rituals / treatment concepts section
+a deeper story section
+a stronger trust section
+more refined calls to action
+
+The homepage must not feel empty or overly minimal.
+
+Logo handling
+
+Use a more considered Zest logo treatment.
+Keep it elegant, but ensure the site styling and accents feel clearly inspired by the real Zest logo colors and personality.
+
+Images and placeholders
+
+Some images are failing to load or showing broken placeholders.
+
+Fix all image handling:
+
+add robust fallback placeholders
+use consistent placeholder images
+make placeholder blocks elegant and branded
+increase the number of image-led sections throughout the site
+
+The website should feel visually rich even before final real images are added.
+
+Content writing
+
+Start replacing thin placeholder text with proper polished brand copy across all non-product pages.
+
+Home page copy direction
+
+Write believable, warm, premium copy about:
+
+natural beauty and wellness
+thoughtful curation
+personal service
+trusted relationships
+long-standing experience
+tailored support for spa, hospitality, retail, and wellbeing
+Our Story page
+
+Write real polished copy covering:
+
+family-led business
+23 years of experience
+why every relationship matters
+careful curation of brands
+long-term trust with customers and suppliers
+why Zest is personal and values-led
+why clients can rely on the company
+Brand Partners page
+
+Write a stronger introduction explaining that Zest represents carefully selected brands chosen for quality, integrity, effectiveness, and meaningful contribution to wellness.
+
+B2B & Hospitality page
+
+Completely enrich this page.
+
+Include strong written content about:
+
+hotel spas
+spas
+hospitality groups
+guest amenities
+retail and boutique opportunities
+tailored recommendations
+flexible support
+curated rituals
+treatment concepts
+spa menu inspiration
+differentiated guest experiences
+bespoke development support
+
+This page should feel much more solution-led and premium.
+
+Bespoke page
+
+Rewrite with stronger copy around:
+
+tailored concepts
+signature rituals
+custom guest amenities
+collaborative development
+private label / custom direction placeholders
+distinctive wellness experiences
+Journal page
+
+Add better intro text and more meaningful article placeholder titles/excerpts.
+
+Contact page
+
+Add warmer and more complete contact copy.
+Make the page feel fuller and more premium.
+Add introductory text encouraging trade, partnership, hospitality, and bespoke enquiries.
+
+Section additions
+
+Add more visual/content richness to the site with:
+
+an “Our approach” section
+a “Trusted for 23 years” style section
+a “Curated rituals and treatments” section
+a “Who we work with” section
+a “Why partners choose Zest” section
+a “Looking for something tailored?” CTA section
+Card and grid improvements
+
+Improve all cards:
+
+more polished hover states
+stronger typography hierarchy
+better spacing
+better tag treatment
+better category labels
+better image cropping
+Footer improvements
+
+Make the footer richer and more premium.
+Add better navigation structure, newsletter treatment, and stronger brand summary copy.
+
+Contact methods
+
+Keep WhatsApp floating button, but style it more elegantly so it fits the site better.
