@@ -51,13 +51,20 @@ export function Header() {
       >
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="group">
-            <span className={cn(
-              "font-serif text-3xl font-bold tracking-[0.1em] transition-colors duration-300",
-              (!isScrolled && isHome) ? "text-foreground" : "text-foreground"
-            )}>
-              ZEST
-            </span>
+          <Link href="/" className="group flex-shrink-0">
+            <img
+              src="/images/zest-logo.jpg"
+              alt="Zest"
+              className="h-10 w-auto object-contain"
+              onError={(e) => {
+                const t = e.currentTarget;
+                t.style.display = "none";
+                const fallback = document.createElement("span");
+                fallback.className = "font-serif text-3xl font-bold tracking-[0.1em] text-foreground";
+                fallback.textContent = "ZEST";
+                t.parentElement?.appendChild(fallback);
+              }}
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -100,11 +107,19 @@ export function Header() {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-background z-40 lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-32 px-6",
+          "fixed inset-0 bg-background z-40 lg:hidden transition-transform duration-500 ease-in-out flex flex-col pt-24 px-6",
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <nav className="flex flex-col gap-6 text-xl font-serif mt-8">
+        {/* Mobile logo */}
+        <Link href="/" className="mb-6">
+          <img
+            src="/images/zest-logo.jpg"
+            alt="Zest"
+            className="h-10 w-auto object-contain"
+          />
+        </Link>
+        <nav className="flex flex-col gap-6 text-xl font-serif mt-4">
           {navLinks.map((link) => (
             <Link
               key={link.name}

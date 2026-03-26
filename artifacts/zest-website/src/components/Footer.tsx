@@ -9,7 +9,23 @@ export function Footer() {
           
           {/* About Zest */}
           <div>
-            <span className="font-serif text-3xl font-bold tracking-[0.1em] mb-6 block">ZEST</span>
+            <Link href="/" className="inline-block mb-6">
+              <div className="bg-white rounded-xl p-2 inline-block">
+                <img
+                  src="/images/zest-logo.jpg"
+                  alt="Zest"
+                  className="h-10 w-auto object-contain"
+                  onError={(e) => {
+                    const t = e.currentTarget;
+                    t.style.display = "none";
+                    const fallback = document.createElement("span");
+                    fallback.className = "font-serif text-3xl font-bold tracking-[0.1em] text-foreground";
+                    fallback.textContent = "ZEST";
+                    t.parentElement?.appendChild(fallback);
+                  }}
+                />
+              </div>
+            </Link>
             <p className="text-background/80 text-sm leading-relaxed mb-6">
               Curating exceptional natural beauty, wellness, and lifestyle brands for 23 years. A family-led commitment to quality and service.
             </p>
