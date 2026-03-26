@@ -15,7 +15,7 @@ function ZestLogoFooter() {
         <img
           src="/images/zest-logo.jpg"
           alt="Zest"
-          className="h-10 w-auto object-contain"
+          className="h-8 w-auto object-contain"
           onError={() => setImgError(true)}
         />
       )}

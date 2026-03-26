@@ -121,7 +121,7 @@ export function Header() {
         )}
       >
         {/* Mobile logo */}
-        <Link href="/" className="mb-6">
+        <Link href="/" className="mb-6" onClick={() => setMobileMenuOpen(false)}>
           <ZestLogo />
         </Link>
         <nav className="flex flex-col gap-6 text-xl font-serif mt-4">
